@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renato Rivadeneira</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Renato Rivadeneira</h1>
+      <p class="tagline">Industrial Civil Engineering · Data Science &amp; Web Design</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Third-year Industrial Civil Engineering student at Universidad de los Andes,
+        Chile, specialising in Data Science and Web Design. I like building things for
+        the web and working with data.
+      </p>
+    </section>
+
+    <section id="wheelhouse">
+      <h2>Wheelhouse — Services &amp; Prices</h2>
+      <p>The live wall list from the Wheelhouse bike shop, read from its JSON API when this page loads.</p>
+
+      <p id="services-status" class="status" role="status">Loading the price list…</p>
+
+      <table id="services-table" hidden>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Price</th>
+            <th scope="col">Times charged</th>
+          </tr>
+        </thead>
+        <tbody id="services-body"></tbody>
+      </table>
+
+      <div class="lookup">
+        <h3>Look up a service by id</h3>
+        <form id="lookup-form">
+          <label for="service-id">Service id</label>
+          <input type="number" id="service-id" min="1" placeholder="e.g. 3">
+          <button type="submit">Look up</button>
+        </form>
+        <p id="lookup-result" class="lookup-result" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Wheelhouse is a course project. The price list is served by a local Rails API on port 3000.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
